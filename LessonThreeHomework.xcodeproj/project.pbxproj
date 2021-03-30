@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		06FA2AB12613755900272310 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FA2AB02613755900272310 /* AppDelegate.swift */; };
 		06FA2AB32613755900272310 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FA2AB22613755900272310 /* SceneDelegate.swift */; };
-		06FA2AB52613755900272310 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FA2AB42613755900272310 /* ViewController.swift */; };
+		06FA2AB52613755900272310 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FA2AB42613755900272310 /* LoginViewController.swift */; };
 		06FA2AB82613755900272310 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06FA2AB62613755900272310 /* Main.storyboard */; };
 		06FA2ABA2613755B00272310 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 06FA2AB92613755B00272310 /* Assets.xcassets */; };
 		06FA2ABD2613755B00272310 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 06FA2ABB2613755B00272310 /* LaunchScreen.storyboard */; };
+		06FA2ACA2613950200272310 /* SuccesLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06FA2AC92613950200272310 /* SuccesLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		06FA2AAD2613755900272310 /* LessonThreeHomework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LessonThreeHomework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		06FA2AB02613755900272310 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		06FA2AB22613755900272310 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		06FA2AB42613755900272310 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		06FA2AB42613755900272310 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		06FA2AB72613755900272310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		06FA2AB92613755B00272310 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		06FA2ABC2613755B00272310 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		06FA2ABE2613755B00272310 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		06FA2AC92613950200272310 /* SuccesLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccesLoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +60,9 @@
 			children = (
 				06FA2AB02613755900272310 /* AppDelegate.swift */,
 				06FA2AB22613755900272310 /* SceneDelegate.swift */,
-				06FA2AB42613755900272310 /* ViewController.swift */,
+				06FA2AB42613755900272310 /* LoginViewController.swift */,
 				06FA2AB62613755900272310 /* Main.storyboard */,
+				06FA2AC92613950200272310 /* SuccesLoginViewController.swift */,
 				06FA2AB92613755B00272310 /* Assets.xcassets */,
 				06FA2ABB2613755B00272310 /* LaunchScreen.storyboard */,
 				06FA2ABE2613755B00272310 /* Info.plist */,
@@ -137,7 +140,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				06FA2AB52613755900272310 /* ViewController.swift in Sources */,
+				06FA2ACA2613950200272310 /* SuccesLoginViewController.swift in Sources */,
+				06FA2AB52613755900272310 /* LoginViewController.swift in Sources */,
 				06FA2AB12613755900272310 /* AppDelegate.swift in Sources */,
 				06FA2AB32613755900272310 /* SceneDelegate.swift in Sources */,
 			);
@@ -293,10 +297,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = philipnoskov.LessonThreeHomework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,10 +317,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = philipnoskov.LessonThreeHomework;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
