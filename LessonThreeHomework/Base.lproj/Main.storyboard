@@ -227,7 +227,7 @@ Login please ☺️ </string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNZ-uv-odJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="kC0-kD-djK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="742" y="75"/>
+            <point key="canvasLocation" x="741.53846153846155" y="74.644549763033169"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
