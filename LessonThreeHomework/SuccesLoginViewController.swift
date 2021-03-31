@@ -9,21 +9,17 @@ import UIKit
 
 class SuccesLoginViewController: UIViewController {
 
+    @IBOutlet weak var userNameLable: UILabel!
+    
+    var userName: String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        userNameLable.text = userName 
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func closeButton() {
+        dismiss(animated: true)
     }
-    */
-
+    
 }

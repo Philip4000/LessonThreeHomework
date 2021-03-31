@@ -30,7 +30,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="name"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YBn-UI-K4q">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YBn-UI-K4q">
                                         <rect key="frame" x="0.0" y="60" width="340" height="50"/>
                                         <color key="backgroundColor" red="0.13670578598976135" green="0.93146449327468872" blue="0.93574899435043335" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -45,7 +45,7 @@
                                 <rect key="frame" x="84.666666666666686" y="69" width="221" height="71.666666666666686"/>
                                 <string key="text">Welcome to App!
 Login please ☺️ </string>
-                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="25"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -66,7 +66,8 @@ Login please ☺️ </string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <segue destination="SIr-EA-K7Y" kind="show" id="smt-vx-Qat"/>
+                                    <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sdu-nW-06e"/>
+                                    <segue destination="SIr-EA-K7Y" kind="presentation" identifier="goToSuccesScene" id="smt-vx-Qat"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="51c-Ha-rVn">
@@ -76,11 +77,17 @@ Login please ☺️ </string>
                                         <rect key="frame" x="0.0" y="3.3333333333333144" width="165" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Forgot User Name?"/>
+                                        <connections>
+                                            <action selector="forgotUserNameButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="dHf-AE-5jg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aFx-aq-4eN">
                                         <rect key="frame" x="175" y="3.3333333333333144" width="165" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                         <state key="normal" title="Forgot Password?"/>
+                                        <connections>
+                                            <action selector="forgotPasswordButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="33a-Gu-SRt"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -109,6 +116,10 @@ Login please ☺️ </string>
                             <constraint firstItem="51c-Ha-rVn" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="zd0-fO-d41"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="nameTF" destination="ed6-na-8th" id="Pl6-c8-osj"/>
+                        <outlet property="passwordTF" destination="YBn-UI-K4q" id="QXX-kw-0EG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -164,6 +175,29 @@ Login please ☺️ </string>
                                         <integer key="value" value="10"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="kC0-kD-djK" kind="unwind" unwindAction="unwindFor:" id="f69-MX-8ph"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0h-3k-gWZ">
+                                <rect key="frame" x="135" y="445.66666666666669" width="120" height="38"/>
+                                <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="120" id="rw9-TB-qu5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="20"/>
+                                <state key="normal" title="CLOSE">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="closeButton" destination="SIr-EA-K7Y" eventType="touchUpInside" id="iwy-lT-I0s"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="25I-Ci-Oyv"/>
@@ -171,6 +205,8 @@ Login please ☺️ </string>
                         <constraints>
                             <constraint firstItem="F1n-yx-P7E" firstAttribute="top" secondItem="4oE-MD-lPy" secondAttribute="bottom" constant="40" id="2ti-A9-i8Q"/>
                             <constraint firstItem="w7C-sN-XLf" firstAttribute="trailing" secondItem="25I-Ci-Oyv" secondAttribute="trailing" id="3Hj-WU-M39"/>
+                            <constraint firstItem="uOH-DL-Y8u" firstAttribute="width" secondItem="w7C-sN-XLf" secondAttribute="width" multiplier="0.307692" id="4ql-KN-QEo"/>
+                            <constraint firstItem="R0h-3k-gWZ" firstAttribute="width" secondItem="w7C-sN-XLf" secondAttribute="width" multiplier="0.307692" id="7Lv-Ss-WwT"/>
                             <constraint firstItem="uOH-DL-Y8u" firstAttribute="top" secondItem="F1n-yx-P7E" secondAttribute="bottom" constant="40" id="Ama-AY-BXv"/>
                             <constraint firstItem="w7C-sN-XLf" firstAttribute="leading" secondItem="25I-Ci-Oyv" secondAttribute="leading" id="Bs3-ml-7VN"/>
                             <constraint firstItem="4oE-MD-lPy" firstAttribute="centerX" secondItem="lX3-dq-Ms2" secondAttribute="centerX" id="NSa-WG-2Q1"/>
@@ -178,12 +214,18 @@ Login please ☺️ </string>
                             <constraint firstItem="w7C-sN-XLf" firstAttribute="top" secondItem="lX3-dq-Ms2" secondAttribute="top" id="ajT-GA-Nx8"/>
                             <constraint firstItem="F1n-yx-P7E" firstAttribute="centerX" secondItem="lX3-dq-Ms2" secondAttribute="centerX" id="f8L-VI-vdq"/>
                             <constraint firstAttribute="bottom" secondItem="w7C-sN-XLf" secondAttribute="bottom" id="ien-Cs-sN4"/>
+                            <constraint firstItem="R0h-3k-gWZ" firstAttribute="centerX" secondItem="lX3-dq-Ms2" secondAttribute="centerX" id="oo1-Zk-vKi"/>
+                            <constraint firstItem="R0h-3k-gWZ" firstAttribute="top" secondItem="uOH-DL-Y8u" secondAttribute="bottom" constant="25" id="wOb-2y-uc2"/>
                             <constraint firstItem="uOH-DL-Y8u" firstAttribute="centerX" secondItem="lX3-dq-Ms2" secondAttribute="centerX" id="yqK-c1-JWJ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="VgB-E5-o3P"/>
+                    <connections>
+                        <outlet property="userNameLable" destination="xBe-gB-fbX" id="IPs-Ww-Pip"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CNZ-uv-odJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="kC0-kD-djK" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="742" y="75"/>
         </scene>
